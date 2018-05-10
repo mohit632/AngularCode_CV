@@ -1,0 +1,8 @@
+.form{
+    width:95%;
+    height:500px;
+    padding:10px;
+    border: 2px dashed lightcoral;
+    box-sizing: border-box;
+    margin: 10px;
+}

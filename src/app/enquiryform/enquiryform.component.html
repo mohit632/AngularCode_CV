@@ -1,0 +1,21 @@
+<div class="form" *ngIf="!sending">
+    <div class="field">Name</div>
+    <div class="form-control"><input type="text" [(ngModel)]="name"></div>
+    <div class="field">Email</div>
+    <div class="form-control"><input type="text" [(ngModel)]="email"></div>
+    <div class="field">Message</div>
+    <div class="form-control"><textarea [(ngModel)]="message" rows="5" cols="40"></textarea></div>
+    <div align="center"><button (click)="sendEnquiry()" class="btn btn-danger">Enquire</button></div>
+    <div class="validation" *ngIf="errors">
+        <ul>
+            <li *ngFor="let x of errorlist">{{x}}</li>
+        </ul>
+    </div>
+</div>
+
+<div class="form" *ngIf="sending">
+    <h1 align="center">{{messageSent}}</h1>
+    <div align="center">
+        <img src="../../assets/images/{{filename}}" height="200" width="200">
+    </div>
+</div>
